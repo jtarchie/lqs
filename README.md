@@ -11,13 +11,6 @@ PRAGMA statements through URI parameters. However, this approach is not
 standardized across all drivers. LQS offers a driver-agnostic way to execute
 PRAGMA statements for each new connection.
 
-## Implementation
-
-LQS uses a custom `connector` that wraps the original driver and executes
-specified SQL statements (including PRAGMA statements) when a new connection is
-established. This approach works with any SQL driver that implements the
-`database/sql/driver` interface.
-
 ## Usage
 
 To use LQS, import the package and use the `Open` function instead of
